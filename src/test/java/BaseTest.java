@@ -17,7 +17,7 @@ public class BaseTest {
     static void setupClass() {
         WebDriverManager.chromedriver().setup();
     }
-}
+
     @BeforeMethod
     static void launchBrowser(){
         ChromeOptions options = new ChromeOptions();
