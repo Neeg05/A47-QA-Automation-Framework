@@ -42,8 +42,8 @@ public class BaseTest {
     @DataProvider (name="CorrectLoginProviders")
     public static Object[][] getDataFromDataProviders(){
         return new Object[][] {
-                {"neelam.gupta@testpro.io", "te$t$tudent1"};
-        }
+                {"neelam.gupta@testpro.io", "te$t$tudent1"}
+        };
     }
     protected static void enterEmail(String email) throws InterruptedException{
         WebElement emailInput = driver.findElement(By.cssSelector("[type='email']"));
