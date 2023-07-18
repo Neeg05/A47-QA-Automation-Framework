@@ -22,7 +22,7 @@ public class Homework20 extends BaseTest {
         WebElement notificationMessage = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.success.show")));
         return notificationMessage.getText();
     }
-    private void clickDeleteButton() {
+      private void clickDeleteButton() {
         WebElement deleteButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='del btn-delete-playlist']")));
         deleteButton.click();
     }
