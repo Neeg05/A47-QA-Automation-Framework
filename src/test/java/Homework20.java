@@ -20,6 +20,7 @@ public class Homework20 extends BaseTest {
     }
     private String getDeletedPlaylistMessage() {
         WebElement notificationMessage = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.success.show")));
+
         return notificationMessage.getText();
     }
       private void clickDeleteButton() {
