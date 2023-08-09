@@ -8,3 +8,4 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), url);
         driver.quit();
     }
+}
