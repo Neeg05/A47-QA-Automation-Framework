@@ -79,13 +79,13 @@ public class BaseTest{
     protected static WebDriver lambdaTest() throws MalformedURLException{
         String hubURL = "https://hub.lambdatest.com/wd/hub";
         ChromeOptions browserOptions = new ChromeOptions();
-        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setPlatformName("macOS Ventura");
         browserOptions.setBrowserVersion("114.0");
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
         ltOptions.put("username", "neelam");
-        ltOptions.put("accessKey", "Cqm43VTgVsKAkKQRXB1GZglMhoM54JShOwOvyZCpaBUvXX1p8o");
+        ltOptions.put("accessKey", "NK3ATSralEHfiZHRDOyJ1eQtzOnxBa7LjA7Tso3FoPRs42Yi35");
         ltOptions.put("project", "Untitled");
-        ltOptions.put("selenium_version", "4.0.0");
+        ltOptions.put("selenium_version", "4.11.0");
         ltOptions.put("w3c", true);
         browserOptions.setCapability("LT:Options", ltOptions);
         return new RemoteWebDriver(new URL(hubURL), browserOptions);
