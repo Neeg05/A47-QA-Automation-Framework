@@ -82,7 +82,7 @@ public class BaseTest{
         browserOptions.setPlatformName("macOS Ventura");
         browserOptions.setBrowserVersion("114.0");
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("username", "neelam");
+        ltOptions.put("username", "neelam.gupta");
         ltOptions.put("accessKey", "NK3ATSralEHfiZHRDOyJ1eQtzOnxBa7LjA7Tso3FoPRs42Yi35");
         ltOptions.put("project", "Untitled");
         ltOptions.put("selenium_version", "4.11.0");
