@@ -28,14 +28,14 @@ public class BaseTest {
     protected static Object[][] getDataFromDataProvider() {
         return new Object[][]{{"neelam.gupta@testpro.io", "te$t$tudent1"},};
     }
-    protected static WebDriver pickBrowser(String browser) throws MalformedURLException{
+    protected static WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        String gridURL= "http://192.168.1.75:444";
+        String gridURL = "http://192.168.1.75:444";
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.addArguments("--disable-notifications");
 
-        switch ("browser"){
+        switch ("browser") {
             case "chrome":
                 return driver = new ChromeDriver(chromeOptions);
             case "firefox":
@@ -65,50 +65,10 @@ public class BaseTest {
                 return driver = new ChromeDriver(chromeOptions);
         }
     }
-    protected static WebDriver lambdaTest() throws MalformedURLException {
-        String hubURL = "https://hub.lambdatest.com/wd/hub";
-        ChromeOptions browserOptions = new ChromeOptions();
-        browserOptions. protected static WebDriver pickBrowser (String browser) throws MalformedURLException {
-            DesiredCapabilities caps = new DesiredCapabilities();
-            String gridURL = "http://192.168.1.75:444";
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--remote-allow-origins=*");
-            chromeOptions.addArguments("--disable-notifications");
-
-            switch ("browser") {
-                case "chrome":
-                    return driver = new ChromeDriver(chromeOptions);
-                case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
-                    FirefoxOptions foxOptions = new FirefoxOptions();
-                    foxOptions.addArguments("--disable-notifications");
-                    return driver = new FirefoxDriver(foxOptions);
-                case "MicrosoftEdge":
-                    WebDriverManager.edgedriver().setup();
-                    EdgeOptions edgeOptions = new EdgeOptions();
-                    edgeOptions.addArguments("--remote-allow-origins=*");
-                    edgeOptions.addArguments("--disable-notifications");
-                    return driver = new EdgeDriver(edgeOptions);
-                case "grid-chrome":
-                    caps.setCapability("browserName", "chrome");
-                    return driver = new RemoteWebDriver(URI.create(gridURL).toURL(), caps);
-                case "grid-firefox":
-                    caps.setCapability("browserName", "firefox");
-                    return driver = new RemoteWebDriver(URI.create(gridURL).toURL(), caps);
-                case "grid-edge":
-                    caps.setCapability("browserName", "MicrosoftEdge");
-                    return driver = new RemoteWebDriver(URI.create(gridURL).toURL(), caps);
-                case "cloud":
-                    return lambdaTest();
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    return driver = new ChromeDriver(chromeOptions);
-            }
-        }
         protected static WebDriver lambdaTest () throws MalformedURLException {
             String hubURL = "https://hub.lambdatest.com/wd/hub";
             ChromeOptions browserOptions = new ChromeOptions();
-            browserOptions.setPlatformname("macOS ventura");
+            browserOptions.setPlatformName("macOS ventura");
             browserOptions.setBrowserVersion("114.0");
             HashMap<String, Object> ltOptions = new HashMap<String, Object>();
             ltOptions.put("username", "neelam.gupta");
