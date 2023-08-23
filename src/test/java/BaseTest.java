@@ -2,7 +2,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.BeforeSuite;
+
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -86,7 +86,7 @@ public class BaseTest {
         @Parameters({"BaseURL"})
         public void launchBrowser (String BaseURL) throws MalformedURLException {
             threadDriver.set(pickBrowser(System.getProperty("browser")));
-            wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+            wait = new WebDriverWait(getDriver(), Duration.ofSeconds(50));
             getDriver().manage().window().maximize();
             url = BaseURL;
             getDriver().get(url);

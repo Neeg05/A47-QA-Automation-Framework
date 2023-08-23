@@ -7,7 +7,7 @@ Feature: Login Feature
     And I click submit
     Then I am logged in
 
-  Scenario: Login Invalid Password
+   Scenario: Login Invalid Password
     When I enter email "neelam.gupta@testpro.io"
     And I enter password "wrongPassword"
     And I click submit

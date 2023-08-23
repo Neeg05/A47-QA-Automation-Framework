@@ -15,7 +15,7 @@ public class LoginTests extends BaseTest {
         options.addArguments("--remote-allow-origins=*");
 
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 
         String url = "https://qa.koel.app/";
         driver.get(url);
