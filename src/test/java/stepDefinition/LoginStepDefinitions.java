@@ -71,6 +71,7 @@ public class LoginStepDefinitions {
         url = "https://qa.koel.app/";
         driver.get(url);
     }
+
     @After
     public void closeBrowser(){
 
