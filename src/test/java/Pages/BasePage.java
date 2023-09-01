@@ -1,6 +1,6 @@
 package Pages;
 
-mport org.openqa.selenium.By;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,7 +19,7 @@ public class BasePage {
     protected static Actions actions;
     public BasePage (WebDriver givenDriver){
         driver = givenDriver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         actions = new Actions(driver);
         PageFactory.initElements(driver, this);
     }

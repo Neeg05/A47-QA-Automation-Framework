@@ -10,7 +10,7 @@ public class PlaybackTests extends BaseTest{
     public void playSongDoubleClick(){
         LoginPage loginPage = new LoginPage(getDriver());
         SongsPage songsPage = new SongsPage(getDriver());
-0
+
         loginPage.login("neelam.gupta@testpro.io" ,"te$t$tudent1");
         songsPage.goToAllSongs().doubleClickRandomSong();
         Assert.assertTrue(songsPage.songIsPlaying().isDisplayed());

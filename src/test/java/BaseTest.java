@@ -68,12 +68,19 @@ public class BaseTest {
 
     }
     public WebDriver lambdaTest() throws MalformedURLException{
+
         String hubURL = "https://hub.lambdatest.com/wd/hub";
-
-
-
-
-
+        ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("macOS ventura");
+        browserOptions.setBrowserVersion("114.0");
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("username", "neelam.gupta");
+        ltOptions.put("accessKey", "NK3ATSralEHfiZHRDOyJ1eQtzOnxBa7LjA7Tso3FoPRs42Yi35");
+        ltOptions.put("project", "Untitled");
+        ltOptions.put("selenium_version", "4.11.0");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        return driver = new RemoteWebDriver(new URL(hubURL), browserOptions);
 
     }
     public WebDriver getDriver(){
@@ -83,7 +90,7 @@ public class BaseTest {
     @Parameters("BaseURL")
     public void launchBrowser(String BaseURL) throws MalformedURLException{
         threadDriver.set(pickBrowser(System.getProperty("browser")));
-        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(50));
         url = BaseURL;
         getDriver().get(url);
         getDriver().manage().window().maximize();
