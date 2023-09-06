@@ -91,7 +91,7 @@ public class BaseTest {
     @Parameters("BaseURL")
     public void launchBrowser(String BaseURL) throws MalformedURLException{
         threadDriver.set(pickBrowser(System.getProperty("browser")));
-        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(100));
+        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         url = BaseURL;
         getDriver().get(url);
         getDriver().manage().window().maximize();
