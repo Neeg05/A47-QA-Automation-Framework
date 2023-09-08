@@ -11,7 +11,7 @@ public class PlaybackTests extends BaseTest{
         LoginPage loginPage = new LoginPage(getDriver());
         SongsPage songsPage = new SongsPage(getDriver());
 
-        loginPage.login("neelam.gupta@testpro.io" ,"te$t$tudent1");
+        loginPage.login("neelam.gupta@testpro.io", "te$t$tudent1");
         songsPage.goToAllSongs().doubleClickRandomSong();
         Assert.assertTrue(songsPage.songIsPlaying().isDisplayed());
     }

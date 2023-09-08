@@ -83,6 +83,8 @@ public class SongsPage extends BasePage{
         return this;
     }
     public WebElement songIsPlaying(){
-        return findElement(playBars);
+
+        return
+                findElement(playBars);
     }
 }

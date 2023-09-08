@@ -27,7 +27,8 @@ public class BasePage {
         return driver.findElements(By.cssSelector(locator));
     }
     public WebElement findElement(WebElement webElement){
-        return wait.until(ExpectedConditions.visibilityOf(webElement));
+        return
+                wait.until(ExpectedConditions.visibilityOf(webElement));
     }
     public void waitToClick(WebElement webElement){
         wait.until(ExpectedConditions.elementToBeClickable(webElement));

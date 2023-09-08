@@ -28,6 +28,7 @@ public class PlaylistTests extends BaseTest {
 
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
+
         loginPage.login("neelam.gupta@testpro.io", "te$t$tudent1");
         homePage.selectRandomPlaylistHomePg();
         homePage.clickDeleteButton();
@@ -57,8 +58,10 @@ public class PlaylistTests extends BaseTest {
     @Test(priority = 3)
     public void renamePlaylist (){
         String randomName = RandomStringUtils.randomAlphabetic(5);
+
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
+
         loginPage.login("neelam.gupta@testpro.io", "te$t$tudent1");
         homePage.contextRandomPlaylistHmPg();
         homePage.selectEdit().editName(randomName);
