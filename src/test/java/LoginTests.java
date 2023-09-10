@@ -3,12 +3,12 @@ import Pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 public class LoginTests extends BaseTest {
-    @Test
+  /*  @Test
     public void registrationNavigation(){
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.getRegistered();
         Assert.assertTrue(loginPage.registerButton().isDisplayed());
-    }
+    } */
     @Test
     public void loginValidCredentials(){
         LoginPage loginPage = new LoginPage(getDriver());

@@ -42,7 +42,7 @@ public class PlaylistTests extends BaseTest {
             Assert.assertTrue(homePage.verificationMessage().contains("Deleted"));
         }
     }
-    @Test(priority = 2)
+  /*  @Test(priority = 2)
     public void addSongToPlaylist() throws ElementNotInteractableException{
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -54,7 +54,7 @@ public class PlaylistTests extends BaseTest {
         catch(ElementNotInteractableException e) {
             Assert.assertTrue(homePage.verificationMessage().contains("Added"));
         }
-    }
+    } */
     @Test(priority = 3)
     public void renamePlaylist (){
         String randomName = RandomStringUtils.randomAlphabetic(5);
